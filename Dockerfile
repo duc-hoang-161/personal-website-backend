@@ -15,6 +15,6 @@ RUN yarn install
 
 RUN yarn build
 
-EXPOSE 3000
 # Specify the command to start the Next.js application
 CMD ["npm", "run", "start"]
+EXPOSE 3000
