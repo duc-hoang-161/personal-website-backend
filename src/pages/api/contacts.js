@@ -1,8 +1,7 @@
 import {
     saveContact,
     listContact,
-    removeContact,
-    updateContact,
+    removeContact
 } from '@/services/aws-dynamodb';
 import { sendEmail } from '@/services/aws-sns';
 
