@@ -96,3 +96,7 @@ jobs:
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
         wait-for-service-stability: true
+    
+    - name: Notify SNS
+      run: |
+        aws sns publish --topic-arn "${{secrets.SNS_ARN}}" --message "New Backend Deployment at $(date +%c)"
