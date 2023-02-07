@@ -1,11 +1,8 @@
 # Use an official Node.js image as the base image
-FROM node:16
+FROM node:16-alpine
 
 # Set the working directory in the image to /app
 WORKDIR /app
-
-# Copy the package.json and package-lock.json files to the image
-COPY package*.json ./
 
 # Copy the rest of the application code to the image
 COPY . .
